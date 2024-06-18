@@ -13,7 +13,7 @@ function Home() {
                                 <a href="index.html" className="logo">
                                    
                                     
-                                    <img src="assets/images/MicrosoftTeams-image (6).png" alt="" style={{height: "70px", width: "140px" }}/>
+                                    <img src="assets/images/Logo.png" alt="" style={{height: "70px", width: "140px" }}/>
                                 </a>
                                 {/* ***** Logo End ***** */}
                                 {/* ***** Search End ***** */}
@@ -47,21 +47,26 @@ function Home() {
       <div className="col-lg-12">
         <div className="page-content">
 
-         {/* ***** Banner Start ***** */}
-          <div className="main-banner">
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="header-text">
-                  <h4><em>Browse</em> Afterlife Adventures </h4>
-                  <div className="main-button">
-                    <a href="browse.html">Play after Death</a>
-                    <h2><img src="assets/images/5guys.png" alt="" style={{height: "300px", width: "500px" }} /></h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* ***** Banner Start ***** */}
+<div className="main-banner">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-5">
+        <img src="assets/images/Colourguys.png" alt="Colourguys" style={{ height: "auto", width: "100%" }} />
+      </div>
+      <div className="col-lg-7 d-flex align-items-center">
+        <div className="header-text">
+          <h2>Afterlife Adventures</h2>
+          <h4><em>Browse</em> Afterlife Adventures</h4>
+          <div className="main-button">
+            <a href="browse.html">Play after Death</a>
           </div>
-         {/* ***** Banner End ***** */}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* ***** Banner End ***** */}
 
          {/* ***** Most Popular Start ***** */}
           <div class="most-popular">
@@ -73,7 +78,7 @@ function Home() {
                 <div class="row">
                   <div class="col-lg-3 col-sm-6">
                     <div class="item">
-                    <img src="assets/images/MicrosoftTeams-image (6).png" alt="" style={{height: "100px", width: "150px" }}/>
+                    <img src="assets/images/Logo.png" alt="" style={{height: "100px", width: "150px" }}/>
                       <h4>Afterlife Adventures<br/><span>JKM Gaming</span></h4>
                       <ul>
                         <li><i class="fa fa-star"></i> 4.8</li>
