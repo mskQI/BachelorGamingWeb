@@ -48,11 +48,13 @@ function Home() {
         <div className="page-content">
 
         {/* ***** Banner Start ***** */}
+
+        
 <div className="main-banner">
   <div className="container">
     <div className="row">
       <div className="col-lg-5">
-        <img src="assets/images/Colourguys.png" alt="Colourguys" style={{ height: "auto", width: "100%" }} />
+        {/* <img src="assets/images/Colourguys.png" alt="Colourguys" style={{ height: "auto", width: "100%" }} /> */}
       </div>
       <div className="col-lg-7 d-flex align-items-center">
         <div className="header-text">

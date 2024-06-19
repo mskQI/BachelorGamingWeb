@@ -773,10 +773,10 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/Colourguys.png);
   background-position: center center;
   background-size: cover;
-  min-height: 380px;
+  min-height: 575px;
   border-radius: 23px;
   padding: 80px 60px;
 }
