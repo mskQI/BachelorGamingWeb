@@ -1,6 +1,12 @@
 # Compiled class file
 *.class
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+/src/firebaseConfig.js
+
 # Log file
 *.log
 

@@ -5,16 +5,18 @@ import Home from './pages/Home';
 import profile from './pages/profile';
 import streams from './pages/streams';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Header from './components/Header'; 
-import Footer from './components/Footer';
+import Header from './Components/Header'; 
+import Footer from './Components/Footer';
+import MainPage from './Components/MainPage';
+
 
 function App() {
     return (
       <div>
-      <Header />
+      <MainPage />
+      {/* <Header />
       <Home/>
-
-     <Footer />
+      <Footer /> */}
       </div> 
     );
 }
