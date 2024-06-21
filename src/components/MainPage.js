@@ -4,7 +4,6 @@ import HomePage from '../pages/Home';
 
 const MainPage = () => {
     const [showUnity, setShowUnity] = useState(false);
-    const [selectedOption, setSelectedOption] = useState('');
     const [unityMessage, setUnityMessage] = useState('');
 
 
@@ -22,18 +21,6 @@ const MainPage = () => {
         frameworkUrl: "Build/WebGL_Builds.framework.js",
         codeUrl: "Build/WebGL_Builds.wasm",
     });
-
-    const handleStartGame = (option) => {
-        setSelectedOption(option);
-        setShowUnity(true);
-        //console.log(JSON.stringify({ matchId, username, playerCount }));
-    };
-
-    useEffect(() => {
-        if (isLoaded && selectedOption) {
-            handleChoosePlayerMode(selectedOption);
-        }
-    }, [isLoaded, selectedOption]);
 
 
     const handleUnityMessage = useCallback((message) => {
@@ -59,6 +46,23 @@ const MainPage = () => {
             delete window.EndUnityGame;
         };
     }, [addEventListener, removeEventListener, handleUnityMessage, handleHideUnity]);
+
+
+    const [functionType, setFunctionType] = useState("ShowMessage");
+    const [value, setValue] = useState(JSON.stringify({ matchId, username, playerCount }));
+    const [gameObject, SetGamObject] = useState("ReactCommunicator");
+
+    const handleStartGame = (option) => {
+        //setValue(option); // use later...
+        setShowUnity(true);
+        //console.log(JSON.stringify({ matchId, username, playerCount }));
+    };
+
+    useEffect(() => {
+        if (isLoaded && value) {
+            sendMessage(gameObject, functionType, value);
+        }
+    }, [isLoaded, value]);
 
 
     function handleChoosePlayerMode(option) {

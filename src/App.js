@@ -8,12 +8,14 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './Components/Header'; 
 import Footer from './Components/Footer';
 import MainPage from './Components/MainPage';
+import ShowFirebase from './Components/ShowFirebase';
 
 
 function App() {
     return (
       <div>
       <MainPage />
+      {/* <ShowFirebase /> */}
       {/* <Header />
       <Home/>
       <Footer /> */}

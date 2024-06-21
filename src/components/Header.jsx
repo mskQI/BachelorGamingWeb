@@ -10,9 +10,8 @@ function Header() {
                       <div className="col-20">
                           <nav className="main-nav">
                               {/* ***** Logo Start ***** */}
-                              <a href="index.html" className="logo" style={{marginLeft: "30px"}}>                                
-                                
-                                  <img src="assets/images/Logo.png" alt="" style={{height: "60px", width: "auto" }}/>
+                              <a href="index.html" className="logo" style={{marginLeft: "30px"}}>                             
+                                <img src="assets/images/Logo.png" alt="" style={{height: "60px", width: "auto" }}/>
                               </a>
                               {/* ***** Logo End ***** */}
                               {/* ***** Search End ***** */}
@@ -25,13 +24,13 @@ function Header() {
                               {/* ***** Search End ***** */}
                               {/* ***** Menu Start ***** */}
                               <ul className="nav">
-                                  <li><a href="index.html">Play Modes</a></li>
-                                  <li><a href="browse.html">Create Room</a></li>
-                                  <li><a href="details.html">Find Room</a></li>
-                                  <li><a href="streams.html">Features</a></li>
-                                  <li><a href="streams.html">Rules</a></li>
-                                  <li><a href="profile.html">Login <VscAccount/></a></li>
-                              </ul>   
+                                  <li><a href="#modes" >Play Modes</a></li>
+                                  <li><a href="#create">Create Room</a></li>
+                                  <li><a href="#find">Find Room</a></li>
+                                  <li><a href="#features">Features</a></li>
+                                  <li><a href="#rules">Rules</a></li>
+                                  <li><a href="login">Login <VscAccount/></a></li>
+                              </ul>
                               <a className='menu-trigger'>
                                   <span>Menu</span>
                               </a>

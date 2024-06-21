@@ -1,6 +1,6 @@
 // src/firebaseUtils.js
 import { db } from './firebaseConfig';
-import {getDocs, addDoc, deleteDoc, doc, collection, updateDoc, increment,onSnapshot } from 'firebase/firestore';
+import {getDocs, addDoc, deleteDoc, doc, collection, updateDoc, increment, onSnapshot } from 'firebase/firestore';
 
 const roomRef = collection(db, "Rooms");
 
@@ -25,12 +25,11 @@ const GetRooms = async () => {
     
     return rooms;
 }
-const GetRoomCount = async () => {
-    const rooms = await getDocs(roomRef);
-    console.log("rooms: " + rooms.docs.length)
-    return rooms.docs.length
-}
 
+const deleteRoom = async (Id) => {
+    const roomDocRef = doc(db, "Rooms", Id);
+    await deleteDoc(roomDocRef);
+}
 
 // Function to create a room
 const createRoom = async (roomName, maxPlayers) => {
@@ -49,8 +48,9 @@ const addPlayerToRoom = async (roomId) => {
 
     const roomDocRef = doc(db, "Rooms", roomId);
     await updateDoc(roomDocRef, {
-        players: increment(1)
+            players: increment(1)
     });
+    
 };
 
 // Function to remove a player from a room
@@ -61,8 +61,5 @@ const removePlayerFromRoom = async (roomId, player) => {
     });
 };
 
-export {createRoom, addPlayerToRoom, removePlayerFromRoom, GetRooms, subscribeToRooms};
-
-
-
+export {createRoom, addPlayerToRoom, removePlayerFromRoom, GetRooms, subscribeToRooms, deleteRoom};
 
